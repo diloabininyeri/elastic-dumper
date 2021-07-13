@@ -1,5 +1,8 @@
 #!/bin/bash
-source "color.sh"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+
+source "$DIR/color.sh"
 # shellcheck disable=SC1073
 if [ "$1" == "-h" ] || [ "$1" == "h" ] || [ "$1" == "help" ] || [ $# -eq 0 ]; then
 
@@ -51,39 +54,39 @@ fi
 
 case $1 in
 "list")
-  source "list.sh"
+  source "$DIR/list.sh"
   exit
   ;;
 "zip")
-  source "zip.sh"
+  source "$DIR/zip.sh"
   exit
   ;;
 "delete")
-  source "delete.sh"
+  source "$DIR/delete.sh"
   exit
   ;;
 "export")
-  source "export.sh"
+  source "$DIR/export.sh"
   exit
   ;;
 "import")
-  source "import.sh"
+  source "$DIR/import.sh"
   exit
   ;;
 "create.snapshot")
-  source "create_snapshot.sh"
+  source "$DIR/create_snapshot.sh"
   exit
   ;;
 "cleanup")
-  source "cleanup.sh"
+  source "$DIR/cleanup.sh"
   exit
   ;;
 "path.repo")
-  source "repo_path.sh"
+  source "$DIR/repo_path.sh"
   exit
   ;;
 "show.repo.path")
-  source "show.repo.path.sh"
+  source "$DIR/show.repo.path.sh"
   exit
   ;;
 esac
