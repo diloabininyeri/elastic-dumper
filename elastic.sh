@@ -1,10 +1,12 @@
 #!/bin/bash
 source "color.sh"
 # shellcheck disable=SC1073
-if [ "$1" == "-h" ] || [ "$1" == "h" ] || [ "$1" == "help" ]; then
+if [ "$1" == "-h" ] || [ "$1" == "h" ] || [ "$1" == "help" ] || [ $# -eq 0 ]; then
 
   echo ""
-  yellow_text "This bash script exports and imports elasticsearch indexes"
+  yellow_text "  This bash script exports and imports elasticsearch indexes"
+  echo ""
+  blue_text "   Dılo sürücü <berxudar@gmail.com"
 
   echo ""
   green_text "   list:"
