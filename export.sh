@@ -13,8 +13,8 @@ if [ "$snapshotCheckSize" -eq 4 ]; then
 
 fi
 
-#read -p "please write snapshot location: " location
-location=$(cat <"/etc/elasticsearch/elasticsearch.yml" | grep "path.repo" | awk '{print $2}')
+read -p "please write snapshot location: " location
+#location=$(cat <"/etc/elasticsearch/elasticsearch.yml" | grep "path.repo" | awk '{print $2}')
 
 if [ ! -d "$location" ]; then
   red_text "${location} path is does not exists"
