@@ -80,4 +80,8 @@ case $1 in
   source "repo_path.sh"
   exit
   ;;
+"show.repo.path")
+  source "show.repo.path.sh"
+  exit
+  ;;
 esac
