@@ -10,6 +10,7 @@ just run it
 
 For global usage you need to add alias keyword to .bashrc file
 
+```console
+alias elastic-dumper="sudo /bin/bash yourpath/elastic.sh"
 ```
-aliasl elastic-dumper="sudo /bin/bash yourpath/elastic.sh"
-```
+>now your command is ready globally
