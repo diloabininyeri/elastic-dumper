@@ -5,12 +5,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "$DIR/color.sh"
 # shellcheck disable=SC1073
 if [ "$1" == "-h" ] || [ "$1" == "h" ] || [ "$1" == "help" ] || [ $# -eq 0 ]; then
-
-  echo ""
-  yellow_text "  This bash script exports and imports elasticsearch indexes"
-  echo ""
-  blue_text "   Dılo sürücü <berxudar@gmail.com"
-
   echo ""
   green_text "   list:"
   echo "     -list all snapshot"
@@ -90,3 +84,11 @@ case $1 in
   exit
   ;;
 esac
+
+error_text "     You have entered an unsupported command, check the help with the h or -h parameter"
+
+
+./elastic.sh
+  blue_bold_text   "  Dılo sürücü <berxudar@gmail.com"
+
+  echo ""

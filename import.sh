@@ -7,7 +7,7 @@ snapshotCheckSize=${#snapshotCheck}
 
 if [ "$snapshotCheckSize" -eq 4 ]; then
 
-  red_text "snapshot my_fs_backup not exists"
+  error_text "snapshot my_fs_backup not exists"
   exit
 fi
 

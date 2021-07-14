@@ -68,9 +68,14 @@ function error_text() {
   close_bold_text
 }
 
-function green_text_bold() {
+function green_bold_text() {
   start_bold_text
   green_text "$1"
+  close_bold_text
+}
+function blue_bold_text() {
+  start_bold_text
+  blue_text "$1"
   close_bold_text
 }
 

@@ -8,7 +8,7 @@ snapshotCheckSize=${#snapshotCheck}
 
 if [ "$snapshotCheckSize" -eq 4 ]; then
 
-  red_text "snapshot my_fs_backup not exists"
+  error_text "snapshot my_fs_backup not exists"
   exit
 
 fi
@@ -17,7 +17,7 @@ read -p "please write snapshot location: " location
 #location=$(cat <"/etc/elasticsearch/elasticsearch.yml" | grep "path.repo" | awk '{print $2}')
 
 if [ ! -d "$location" ]; then
-  red_text "${location} path is does not exists"
+  error_text "${location} path is does not exists"
   exit
 fi
 
@@ -28,5 +28,5 @@ echo # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 
   createRepo=$(curl -XPUT -s "${host}/_snapshot/my_fs_backup/${repo}?pretty=true")
-  green_text "$createRepo"
+  success_text "$createRepo"
 fi

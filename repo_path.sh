@@ -8,4 +8,6 @@ if ! grep -q path.repo "$file"; then
   exit
 fi
 
-red_text "already written "
+
+info_text "already written "
+echo ""
