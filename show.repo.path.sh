@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ ! "$SUDO_USER" ]; then
-  error_text "This option requires root privileges."
+  error_text "This option requires sudo privileges."
   echo ""
   exit
 fi
