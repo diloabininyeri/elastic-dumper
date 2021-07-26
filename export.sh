@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 host="http://localhost:9200"
 
 snapshotCheck=$(curl -XGET -s ${host}/_snapshot | jq .my_fs_backup)
