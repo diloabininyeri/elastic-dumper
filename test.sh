@@ -9,8 +9,6 @@ function get_response_status() {
 
 }
 
-host="www.google11.com"
-
 # shellcheck disable=SC2154
 response_status=$(get_response_status "$host")
 
