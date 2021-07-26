@@ -1,6 +1,8 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+# shellcheck disable=SC2034
+host="http://localhost:9200"
 
 source "$DIR/color.sh"
 # shellcheck disable=SC1073

@@ -6,16 +6,11 @@ function get_response_status() {
   local response_status
   response_status=$(echo "$status" | awk '{print $2}')
   echo "$response_status"
-
 }
-
-host="www.google11.com"
 
 # shellcheck disable=SC2154
 response_status=$(get_response_status "$host")
-
-
 if [[ "$response_status" -ne 200 ]]; then
-  echo "Failed to connect to address $host"
+  error_text "Failed to connect to address $host"
   exit
 fi

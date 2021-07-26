@@ -1,6 +1,8 @@
 #!/bin/bash
 
-host="localhost:9200"
+source "$DIR/check_host.sh"
+
+# shellcheck disable=SC2154
 response=$(curl -XPUT -s "${host}/_snapshot/my_fs_backup?pretty" -H 'Content-Type: application/json' -d'
 {
   "type": "fs",

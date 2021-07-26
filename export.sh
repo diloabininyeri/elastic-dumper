@@ -1,6 +1,8 @@
 #!/bin/bash
 
-host="http://localhost:9200"
+host="http://localhost1:9200"
+
+source "$DIR/check_host.sh"
 
 snapshotCheck=$(curl -XGET -s ${host}/_snapshot | jq .my_fs_backup)
 snapshotCheckSize=${#snapshotCheck}
