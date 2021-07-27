@@ -7,7 +7,7 @@ if [ ! "$SUDO_USER" ]; then
   exit
 fi
 
-elasticsearch_yml="/etc/elasticsearch/elasticsearch1.yml"
+elasticsearch_yml="/etc/elasticsearch/elasticsearch.yml"
 
 if [ ! -f "$elasticsearch_yml" ]; then
   red_text "$elasticsearch_yml doesnt exists"
