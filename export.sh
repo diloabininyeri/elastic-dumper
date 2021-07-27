@@ -1,10 +1,9 @@
 #!/bin/bash
 
-host="http://localhost1:9200"
-
 source "$DIR/check_host.sh"
 
-snapshotCheck=$(curl -XGET -s ${host}/_snapshot | jq .my_fs_backup)
+# shellcheck disable=SC2154
+snapshotCheck=$(curl -XGET -s "$host"/_snapshot | jq .my_fs_backup)
 snapshotCheckSize=${#snapshotCheck}
 
 if [ "$snapshotCheckSize" -eq 4 ]; then
