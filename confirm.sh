@@ -1,6 +1,5 @@
 #!/bin/bash
 
-source "color.sh"
 function confirm() {
   read -p "$1: (y|n)?" -n 1 -r
   shift 1
