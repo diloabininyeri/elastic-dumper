@@ -15,4 +15,10 @@ alias elastic-dumper="sudo /bin/bash yourpath/elastic.sh"
 ```
 >now your command is ready globally
 
+run it from anywhere from terminal
+
+```console
+ elastic-dumper
+```
+
 
