@@ -18,7 +18,10 @@ alias elastic-dumper="sudo /bin/bash yourpath/elastic.sh"
 run it from anywhere from terminal
 
 ```console
- elastic-dumper
+elastic-dumper
 ```
+**Screenshot**
+
+![elastic-dumper](https://i.ibb.co/rxd5nPr/Screenshot-from-2021-07-27-12-25-19.png)
 
 
