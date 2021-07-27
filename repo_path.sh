@@ -10,10 +10,10 @@ if [ ! "$SUDO_USER" ]; then
 fi
 file="/etc/elasticsearch/elasticsearch.yml"
 check=$(grep -n path.repo "$file" | grep -v "#")
-
+path_repo="path.repo: /home/my_fs_backup_location"
 if [ ${#check} -eq 0 ]; then
-  echo "path.repo: /home/my_fs_backup_location" >>$file
-  green_text "path.repo wrote to elasticsearch.yml file"
+  echo "$path_repo" >>$file
+  green_text "$path_repo wrote to elasticsearch.yml file"
   exit
 fi
 
