@@ -1,5 +1,5 @@
 #!/bin/bash
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # shellcheck disable=SC2034
 host="http://localhost:9200"
@@ -26,6 +26,11 @@ if [ "$1" == "-h" ] || [ "$1" == "h" ] || [ "$1" == "help" ] || [ $# -eq 0 ]; th
   echo ""
   green_text "    export:"
   echo "       -export indices"
+  echo ""
+  green_text "    re-export:"
+  echo "       -re again export indices"
+  echo "       -It is recommended to use this if it has been exported before."
+  blue_text  "       is the shortcut of delete snapshot folder contents and re again export"
   echo ""
   green_text "    import:"
   echo "        -import indices"
@@ -85,12 +90,15 @@ case $1 in
   source "$DIR/show.repo.path.sh"
   exit
   ;;
+"re-export")
+  source "$DIR/reexport.sh"
+  exit
+  ;;
 esac
 
 error_text "     You have entered an unsupported command, check the help with the h or -h parameter"
 
-
 ./elastic.sh
-  blue_bold_text   "  Dılo sürücü <berxudar@gmail.com"
+blue_bold_text "  Dılo sürücü <berxudar@gmail.com"
 
-  echo ""
+echo ""
