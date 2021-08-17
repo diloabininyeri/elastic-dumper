@@ -9,6 +9,7 @@ function confirm() {
   else
     echo ""
     red_text "aborted"
+    exit
   fi
 }
 
@@ -27,11 +28,13 @@ function confirm_with_option() {
 
     "No")
       red_text "aborted"
+      exit
       break
       ;;
 
     *)
       red_text "Invalid entry."
+      exit
       break
       ;;
     esac
