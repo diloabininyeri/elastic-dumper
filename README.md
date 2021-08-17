@@ -5,13 +5,13 @@ elasticsearch snapshot import & export bash script
 just run it
 
 ```console
-./elastic.sh
+./main.sh
 ```
 
 For global usage you need to add alias keyword to .bashrc file
 
 ```console
-alias elastic-dumper="sudo /bin/bash yourpath/elastic.sh"
+alias elastic-dumper="sudo /bin/bash yourpath/main.sh"
 ```
 >now your command is ready globally
 
